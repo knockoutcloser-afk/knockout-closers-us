@@ -1,0 +1,368 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Knockout Closers™ Global Brand Design System
+ * Deep Space Black · Nebula Navy · Royal Purple · Cosmic Violet ·
+ * Electric Blue · Titanium Silver · Executive Red
+ * Feel: Apple × OpenAI × Linear × Arc × Stripe inside an AI ecosystem.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-surface: var(--surface);
+  --color-violet: var(--violet);
+  --color-blue: var(--blue);
+  --color-steel: var(--steel);
+  --color-silver: var(--silver);
+}
+
+:root {
+  --radius: 1rem;
+
+  /* Brand palette (oklch of the exact hex values) */
+  --deep-space: oklch(0.108 0.024 269);   /* #05070D */
+  --nebula-navy: oklch(0.202 0.077 269);  /* #0B1736 */
+  --midnight: oklch(0.244 0.098 270);     /* #101C42 */
+  --royal-purple: oklch(0.556 0.263 296); /* #6D3EFF */
+  --cosmic-violet: oklch(0.640 0.229 297);/* #8B5CF6 */
+  --electric-blue: oklch(0.516 0.246 267);/* #2563FF */
+  --steel: oklch(0.700 0.020 264);        /* steel grey */
+  --titanium: oklch(0.833 0.010 264);     /* #C7CCD6 */
+  --exec-red: oklch(0.588 0.235 25);      /* #D72638 */
+
+  --background: var(--deep-space);
+  --surface: var(--nebula-navy);
+  --foreground: oklch(0.98 0.005 264);
+  --card: var(--midnight);
+  --card-foreground: oklch(0.98 0.005 264);
+  --popover: var(--midnight);
+  --popover-foreground: oklch(0.98 0.005 264);
+  --primary: var(--royal-purple);
+  --primary-foreground: oklch(0.99 0 0);
+  --violet: var(--cosmic-violet);
+  --blue: var(--electric-blue);
+  --steel-token: var(--steel);
+  --silver: var(--titanium);
+  --secondary: oklch(0.28 0.075 270);
+  --secondary-foreground: oklch(0.95 0.005 264);
+  --muted: oklch(0.24 0.055 270);
+  --muted-foreground: oklch(0.72 0.020 264);
+  --accent: var(--cosmic-violet);
+  --accent-foreground: oklch(0.99 0 0);
+  --destructive: var(--exec-red);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: var(--royal-purple);
+  --chart-1: var(--royal-purple);
+  --chart-2: var(--electric-blue);
+  --chart-3: var(--cosmic-violet);
+  --chart-4: var(--titanium);
+  --chart-5: var(--titanium);
+  --sidebar: var(--nebula-navy);
+  --sidebar-foreground: oklch(0.98 0.005 264);
+  --sidebar-primary: var(--royal-purple);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: var(--midnight);
+  --sidebar-accent-foreground: oklch(0.98 0.005 264);
+  --sidebar-border: oklch(1 0 0 / 8%);
+  --sidebar-ring: var(--royal-purple);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #05070D 0%, #0B1736 40%, #6D3EFF 80%, #2563FF 100%);
+  --gradient-secondary: linear-gradient(180deg, #05070D 0%, #101C42 100%);
+  --gradient-premium: linear-gradient(90deg, #C7CCD6 0%, #FFFFFF 100%);
+  --gradient-cta: linear-gradient(135deg, #6D3EFF 0%, #2563FF 100%);
+  --gradient-text: linear-gradient(90deg, #C7CCD6 0%, #FFFFFF 40%, #8B5CF6 100%);
+
+  /* Shadows */
+  --shadow-glow-purple: 0 20px 60px -20px oklch(0.556 0.263 296 / 0.45);
+  --shadow-glow-blue: 0 20px 60px -20px oklch(0.516 0.246 267 / 0.35);
+  --shadow-card: 0 1px 0 0 oklch(1 0 0 / 0.06) inset, 0 30px 60px -30px oklch(0 0 0 / 0.6);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "cv11", "ss01", "ss03";
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: oklch(0.556 0.263 296 / 0.35);
+    color: #fff;
+  }
+}
+
+@utility gradient-text {
+  background-image: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility gradient-titanium {
+  background-image: var(--gradient-premium);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-gradient-cta {
+  background-image: var(--gradient-cta);
+}
+
+@utility bg-gradient-primary {
+  background-image: var(--gradient-primary);
+}
+
+@utility bg-gradient-secondary {
+  background-image: var(--gradient-secondary);
+}
+
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow-purple);
+}
+
+@utility shadow-card-premium {
+  box-shadow: var(--shadow-card);
+}
+
+@utility glass-card {
+  background: linear-gradient(180deg, oklch(1 0 0 / 0.04), oklch(1 0 0 / 0.01));
+  border: 1px solid oklch(1 0 0 / 0.08);
+  backdrop-filter: blur(20px);
+}
+
+@utility titanium-hairline {
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    oklch(0.833 0.010 264 / 0.1) 20%,
+    oklch(0.833 0.010 264 / 0.7) 50%,
+    oklch(0.833 0.010 264 / 0.1) 80%,
+    transparent 100%
+  );
+}
+
+@utility text-titanium {
+  color: var(--titanium);
+}
+
+/* Textura de lona de ring al 5% */
+@utility ring-canvas {
+  opacity: 0.05;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(199, 204, 214, 0.35) 0px,
+      rgba(199, 204, 214, 0.35) 1px,
+      transparent 1px,
+      transparent 5px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(199, 204, 214, 0.25) 0px,
+      rgba(199, 204, 214, 0.25) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+  background-size: 6px 6px;
+}
+
+/* Titanium Glow para títulos de marca */
+@utility titanium-glow {
+  color: #E8EAED;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 12px rgba(199, 204, 214, 0.6),
+    0 0 24px rgba(124, 58, 237, 0.3);
+}
+
+/* Logo KC flotante con glow */
+@utility kc-glow {
+  filter: drop-shadow(0 0 8px rgba(124, 58, 237, 0.4));
+}
+
+@utility kc-glow-lg {
+  filter: drop-shadow(0 0 18px rgba(199, 204, 214, 0.35))
+    drop-shadow(0 0 34px rgba(124, 58, 237, 0.35));
+}
+
+@keyframes titanium-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 40px rgba(124, 58, 237, 0.5),
+      0 0 80px rgba(124, 58, 237, 0.3);
+  }
+  50% {
+    box-shadow:
+      0 0 26px rgba(124, 58, 237, 0.3),
+      0 0 52px rgba(124, 58, 237, 0.18);
+  }
+}
+
+@keyframes arrow-bounce-r {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes arrow-bounce-l {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-4px);
+  }
+}
+
+@utility btn-titanium {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      105deg,
+      #e8e8e8 0%,
+      #c0c0c0 22%,
+      #d6d6d6 42%,
+      #c0c0c0 62%,
+      #d8d8d8 82%,
+      #e8e8e8 100%
+    );
+  color: #0a0a0b;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid #b8b8bd;
+  border-radius: 9999px;
+  padding: 14px 28px;
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.7),
+    0 0 20px rgba(199, 199, 204, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.18) 0px,
+        rgba(255, 255, 255, 0.18) 1px,
+        transparent 1px,
+        transparent 4px
+      );
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    );
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow:
+      0 0 16px rgba(255, 255, 255, 0.9),
+      0 0 32px rgba(199, 199, 204, 0.7),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  }
+
+  &:hover::after {
+    left: 140%;
+  }
+}
+
+@utility arrow-bounce-right {
+  animation: arrow-bounce-r 1.4s infinite;
+}
+
+@utility arrow-bounce-left {
+  animation: arrow-bounce-l 1.4s infinite;
+}
