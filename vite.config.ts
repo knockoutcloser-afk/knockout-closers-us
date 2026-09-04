@@ -4,12 +4,9 @@ export default defineConfig({
   server: {
     preset: "vercel"
   },
-  router: {
-    client: {
-      input: "app/client.tsx"
-    }
-  },
   tanstackStart: {
-    server: { entry: "server" },
+    server: { 
+      entry: "app/ssr.tsx" 
+    },
   },
 });
