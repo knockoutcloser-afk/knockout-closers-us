@@ -202,7 +202,6 @@ function Testimonios() {
     >
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-3xl text-center">
-          {/* Botón estético plata con aura */}
           <div 
             className="inline-flex items-center gap-2 rounded-full px-6 py-2 text-xs font-black uppercase tracking-[0.3em] text-[#0A0A0D] shadow-lg mb-4"
             style={{
@@ -281,7 +280,6 @@ function VideoTestimonial() {
     <section className="relative border-b border-white/5 px-6 py-24 md:py-32">
       <div className="mx-auto max-w-4xl">
         <div className="mx-auto max-w-2xl text-center">
-          {/* Botón estético plata con aura */}
           <div 
             className="inline-flex items-center gap-2 rounded-full px-6 py-2 text-xs font-black uppercase tracking-[0.3em] text-[#0A0A0D] shadow-lg mb-4"
             style={{
@@ -732,10 +730,27 @@ const SELLOS = ["Florida Global University (USA)", "Continuing Education", "High
 function RutaTemporadas() {
   return (
     <section className="relative border-b border-white/5 px-6 py-24 md:py-32">
+      {/* Estilos CSS en línea para la animación de pulso y aura morada */}
+      <style>{`
+        @keyframes pulseGlow {
+          0%, 100% {
+            text-shadow: 0 0 15px rgba(168, 85, 247, 0.4), 0 0 30px rgba(168, 85, 247, 0.2);
+            transform: scale(1);
+          }
+          50% {
+            text-shadow: 0 0 25px rgba(168, 85, 247, 0.8), 0 0 50px rgba(168, 85, 247, 0.4);
+            transform: scale(1.01);
+          }
+        }
+        .pulsing-purple-aura {
+          animation: pulseGlow 3s infinite ease-in-out;
+        }
+      `}</style>
+
       <div className="mx-auto max-w-6xl">
         
-        {/* BLOQUE 1: TEMPORADA 1 (CON FRASE DISRUPTIVA Y BOTÓN PLATEADO) */}
-        <div className="mx-auto max-w-2xl text-center mb-12">
+        {/* BLOQUE 1: TEMPORADA 1 (CON BOTÓN PLATEADO Y TÍTULO CON AURA PULSATIVA MORADA, SIN GUION) */}
+        <div className="mx-auto max-w-3xl text-center mb-12">
           <div 
             className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-black uppercase tracking-[0.28em] text-[#0A0A0D] shadow-lg mb-4"
             style={{
@@ -746,8 +761,8 @@ function RutaTemporadas() {
           >
             Temporada 1 · Empieza tu cambio
           </div>
-          <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-5xl">
-            Rompe el Techo de Cristal — Entra a la Temporada 1
+          <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-5xl pulsing-purple-aura inline-block">
+            Rompe el Techo de Cristal Entra a la Temporada 1
           </h2>
         </div>
 
@@ -757,7 +772,7 @@ function RutaTemporadas() {
           ))}
         </div>
 
-        {/* BLOQUE 2: COMBO ALL-ACCESS (CON FRASE DE ESTATUS Y BOTÓN PLATEADO) */}
+        {/* BLOQUE 2: COMBO ALL-ACCESS (CON BOTÓN PLATEADO DE AUTORIDAD Y FRASE DE ESTATUS) */}
         <div className="mx-auto max-w-2xl text-center mb-12">
           <div 
             className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-black uppercase tracking-[0.28em] text-[#0A0A0D] shadow-lg mb-4"
@@ -778,7 +793,7 @@ function RutaTemporadas() {
           <BundleBanner />
         </div>
 
-        {/* 3. RESPALDO ACADÉMICO EXCLUSIVO FGU (CON BOTONES NEGRO METAL CON AURA MORADA) */}
+        {/* 3. RESBALDO ACADÉMICO EXCLUSIVO FGU */}
         <div 
           className="relative mt-14 overflow-hidden rounded-3xl p-8 md:p-12 shadow-[0_25px_60px_rgba(0,0,0,0.95)]"
           style={{
@@ -795,7 +810,6 @@ function RutaTemporadas() {
           />
 
           <div className="relative text-center">
-            {/* Botón estético plata con aura */}
             <div 
               className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-extrabold uppercase tracking-[0.28em] text-[#0A0A0D] shadow-lg"
               style={{
