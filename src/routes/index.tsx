@@ -176,7 +176,7 @@ function Hero() {
           </h1>
           <p className="mx-auto mt-7 max-w-[46ch] text-balance text-lg font-medium leading-relaxed text-zinc-200 md:text-xl lg:mx-0">
             Domina la mentalidad, el contragolpe comercial y la psicología del
-            c cierre consultivo B2B en 5 Rounds estratégicos.
+            cierre consultivo B2B en 5 Rounds estratégicos.
           </p>
           <div className="mt-10 flex flex-col items-center gap-3 lg:items-start">
             <CTAButton href={HOTMART_URL}>{CTA_LABEL}</CTAButton>
@@ -480,7 +480,7 @@ function Autoridad() {
   );
 }
 
-/* ---------- F) RUTA 5 TEMPORADAS + CERTIFICACIÓN ---------- */
+/* ---------- F) RUTA 5 TEMPORADAS + CERTIFICACIÓN FGU ---------- */
 
 type Temporada = {
   id: string;
@@ -645,54 +645,53 @@ const BUNDLE_INCLUYE = [
   "Temporada 3: Psicología del Cierre (Rounds 8 al 10)",
   "Temporada 4: Estatura de Élite (Rounds 11 al 13)",
   "Temporada 5: Metodología DISC y las Aves (Masterclass Completa)",
-  "Bono: Sesiones de Mentoría 1-1 + Opción a Doble Certificación Oficial SEP/CONOCER & FGU",
+  "Bono: Sesiones de Mentoría 1-1 + Acompañamiento a Certificación Internacional FGU",
 ];
 
 function BundleBanner() {
   return (
-    <div className="glass-card shadow-card-premium relative mt-8 overflow-hidden rounded-3xl">
-      <div className="grid gap-0 md:grid-cols-[minmax(0,320px)_1fr]">
+    <div className="glass-card shadow-card-premium relative overflow-hidden rounded-3xl h-full flex flex-col justify-between">
+      <div className="grid h-full grid-cols-1 md:grid-cols-[minmax(0,280px)_1fr]">
         <img
           src={portadaCombo}
           alt="Pase All-Access — Universo Knockout Closers"
           loading="lazy"
           className="h-full w-full object-cover"
         />
-        <div className="p-8 md:p-10">
-          <div className="inline-flex items-center rounded-full border border-[#C7CCD6]/30 bg-white/[0.04] px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-[#C7CCD6]">
-            Mejor valor · Pase de fundador
+        <div className="p-6 md:p-8 flex flex-col justify-between">
+          <div>
+            <div className="inline-flex items-center rounded-full border border-green-500/40 bg-green-500/10 px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-green-400 font-bold">
+              Más Popular & Ahorro
+            </div>
+            <h3 className="mt-4 text-balance text-xl font-semibold leading-tight text-white md:text-2xl">
+              Combo 5 Temporadas <span className="text-green-400">All-Access</span>
+            </h3>
+            <p className="mt-3 text-[14px] leading-[1.6] text-white/70">
+              Acceso inmediato a todo el contenido sin esperas. Elegible para tramitar el certificado oficial internacional de Florida Global University con nuestro acompañamiento guiado.
+            </p>
+            <ul className="mt-4 space-y-2">
+              {BUNDLE_INCLUYE.map((b) => (
+                <li
+                  key={b}
+                  className="flex items-start gap-2 text-[13px] leading-[1.5] text-white/75"
+                >
+                  <Check
+                    size={15}
+                    strokeWidth={2.5}
+                    className="mt-0.5 shrink-0 text-green-400"
+                  />
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-          <h3 className="mt-5 text-balance text-2xl font-semibold leading-tight text-white md:text-3xl">
-            ¿Quieres el ecosistema completo con más del{" "}
-            <span className="gradient-text">65% de descuento</span>?
-          </h3>
-          <p className="mt-4 text-[15px] leading-[1.7] text-white/70">
-            Obtén acceso total a las 5 Temporadas + Mentorías 1-1 + Opción a
-            Certificación Oficial SEP/CONOCER y Florida Global University.
-          </p>
-          <ul className="mt-6 space-y-2.5">
-            {BUNDLE_INCLUYE.map((b) => (
-              <li
-                key={b}
-                className="flex items-start gap-2.5 text-[14px] leading-[1.6] text-white/70"
-              >
-                <Check
-                  size={16}
-                  strokeWidth={2}
-                  className="mt-0.5 shrink-0"
-                  style={{ color: "#C7CCD6" }}
-                />
-                <span>{b}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-5 text-[15px] text-white/50">
-            Valor individual: <span className="line-through">$1,335 USD</span> →{" "}
-            <span className="font-semibold text-[#E8EAED]">
-              Precio All-Access: $597 USD
-            </span>
-          </p>
-          <div className="mt-7">
+          <div className="mt-6 pt-4 border-t border-white/10">
+            <p className="text-[14px] text-white/50 mb-3">
+              Valor: <span className="line-through">$1,335 USD</span> →{" "}
+              <span className="font-extrabold text-green-400 text-lg">
+                $597 USD (Ahorras $738)
+              </span>
+            </p>
             <CTAButton href={BUNDLE_URL}>
               Obtener el Combo All-Access Completo ($597 USD)
             </CTAButton>
@@ -703,84 +702,38 @@ function BundleBanner() {
   );
 }
 
-const PRICING_CHECKS = [
-  "Acceso completo a los 5 Rounds en video bajo demanda (Hotmart Club)",
-  "Metodología CLOSER consultiva paso a paso",
-  "Plantillas, guiones resueltos y manual de objeciones (La Venda)",
-  "Laboratorio y dinámicas de roleplay (La Campana)",
-  "7 días de garantía incondicional de satisfacción",
-];
-
 function PricingCard() {
-  return (
-    <section className="relative border-b border-white/5 px-6 pb-24 md:pb-32">
-      <div className="mx-auto max-w-2xl">
-        <div className="glass-card shadow-card-premium relative overflow-hidden rounded-3xl p-8 text-center md:p-10">
-          <div className="pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-[#C7CCD6]/50 to-transparent" />
-          <div className="inline-flex items-center rounded-full border border-[#C7CCD6]/30 bg-white/[0.04] px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-[#C7CCD6]">
-            Oferta individual · Acceso inmediato
-          </div>
-          <h2 className="mt-6 text-2xl font-semibold text-white md:text-3xl">
-            Inversión en Temporada 1: Iniciación
-          </h2>
-          <div className="mt-6 text-5xl font-bold tracking-tight text-[#E8EAED] md:text-6xl">
-            $147 USD
-          </div>
-          <p className="mt-2 text-[13px] uppercase tracking-[0.2em] text-white/40">
-            Pago único
-          </p>
-          <ul className="mx-auto mt-9 max-w-md space-y-4 text-left">
-            {PRICING_CHECKS.map((c) => (
-              <li
-                key={c}
-                className="flex items-start gap-3 text-[15px] leading-[1.65] text-white/75"
-              >
-                <Check
-                  size={18}
-                  strokeWidth={2.5}
-                  className="mt-0.5 shrink-0 text-[#C7CCD6]"
-                />
-                <span>{c}</span>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-10 flex flex-col items-center gap-3">
-            <CTAButton href={HOTMART_URL}>
-              Asegurar mi lugar en Temporada 1 por $147 USD
-            </CTAButton>
-            <p className="text-[13px] text-white/45">
-              Pago 100% seguro vía Hotmart · Acceso instantáneo
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+  return null;
 }
 
-const SELLOS = ["CONOCER", "SEP", "CELAM", "Florida Global University"];
+const SELLOS = ["Florida Global University (USA)", "Continuing Education", "High-Ticket B2B Sales"];
 
 function RutaTemporadas() {
   return (
     <section className="relative border-b border-white/5 px-6 py-24 md:py-32">
       <div className="mx-auto max-w-6xl">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-2xl text-center mb-16">
           <div className="text-[11px] uppercase tracking-[0.32em] text-white/40">
-            La ruta completa
+            Elige tu camino en el ring
           </div>
           <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight text-white md:text-5xl">
-            5 Temporadas. <span className="gradient-text">5 Rounds</span>.
+            Comienza con la Temporada 1 o accede al <span className="gradient-text">Combo All-Access</span>.
           </h2>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {TEMPORADAS.map((t) => (
-            <TemporadaCard key={t.id} t={t} />
-          ))}
+        {/* 1. ARRIBA: TEMPORADA 1 Y EL COMBO COMPLETO JUNTOS */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch mb-20">
+          <div className="flex flex-col justify-between">
+            {TEMPORADAS.filter(t => t.id === "t1").map((t) => (
+              <TemporadaCard key={t.id} t={t} />
+            ))}
+          </div>
+          <div className="flex flex-col justify-center">
+            <BundleBanner />
+          </div>
         </div>
 
-        <BundleBanner />
-
+        {/* 2. RESBALDO ACADÉMICO EXCLUSIVO FGU (SIN CONOCER) */}
         <div 
           className="relative mt-14 overflow-hidden rounded-3xl p-8 md:p-12 shadow-[0_25px_60px_rgba(0,0,0,0.95)]"
           style={{
@@ -798,7 +751,7 @@ function RutaTemporadas() {
 
           <div className="relative text-center">
             <div 
-              className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-extrabold uppercase tracking-[0.28em] text-[#0A0A0D] shadow-lg transition-transform"
+              className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-extrabold uppercase tracking-[0.28em] text-[#0A0A0D] shadow-lg"
               style={{
                 background: "linear-gradient(180deg, #FFFFFF 0%, #D8DCE3 35%, #9EA5B4 70%, #E2E6EC 100%)",
                 border: "1px solid #FFFFFF",
@@ -809,7 +762,7 @@ function RutaTemporadas() {
             </div>
 
             <h3 
-              className="mx-auto mt-6 max-w-[24ch] text-balance text-2xl font-black uppercase tracking-tight md:text-4xl"
+              className="mx-auto mt-6 max-w-[28ch] text-balance text-2xl font-black uppercase tracking-tight md:text-4xl"
               style={{
                 background: "linear-gradient(180deg, #FFFFFF 20%, #D1D5DB 65%, #9CA3AF 100%)",
                 WebkitBackgroundClip: "text",
@@ -817,69 +770,40 @@ function RutaTemporadas() {
                 filter: "drop-shadow(0 4px 14px rgba(0,0,0,0.9))"
               }}
             >
-              Certificación Oficial con Doble Validez Curricular
+              Acreditación Internacional con Florida Global University (FGU)
             </h3>
 
             <p className="mx-auto mt-4 max-w-[62ch] text-[15px] font-medium leading-[1.75] text-[#C7CCD6]">
-              Al completar la formación de Knockout Closers™, accede al proceso de evaluación para certificar tus competencias ante organismos de máxima autoridad.
+              Al completar las 5 temporadas del programa, obtén el respaldo académico internacional emitido por Florida Global University (USA), diseñado para destacar en corporativos globales en Estados Unidos. Nuestro equipo te guía y acompaña de la mano en todo el proceso de solicitud.
             </p>
           </div>
 
-          <div className="relative mt-10 grid gap-6 md:grid-cols-2">
+          <div className="relative mt-10 max-w-xl mx-auto overflow-hidden rounded-2xl p-8"
+            style={{
+              background: "linear-gradient(180deg, rgba(32, 26, 44, 0.8) 0%, rgba(12, 13, 17, 0.98) 100%)",
+              border: "1px solid rgba(168, 85, 247, 0.35)",
+              boxShadow: "inset 0 1px 0 rgba(216, 180, 254, 0.2), 0 10px 30px rgba(109, 40, 217, 0.18)"
+            }}
+          >
             <div 
-              className="relative overflow-hidden rounded-2xl p-8 transition-all duration-300 hover:border-white/40"
+              className="inline-block rounded-md px-3.5 py-1.5 text-[10px] font-black uppercase tracking-[0.25em] text-[#0A0A0D]"
               style={{
-                background: "linear-gradient(180deg, rgba(26, 28, 35, 0.9) 0%, rgba(12, 13, 17, 0.98) 100%)",
-                border: "1px solid rgba(199, 204, 214, 0.25)",
-                boxShadow: "inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 10px 30px rgba(0,0,0,0.6)"
+                background: "linear-gradient(180deg, #FFFFFF 0%, #E3DDF4 45%, #B6A7D9 100%)",
+                border: "1px solid rgba(255,255,255,0.9)",
+                boxShadow: "0 2px 10px rgba(168,85,247,0.3), inset 0 1px 0 #FFFFFF"
               }}
             >
-              <div 
-                className="inline-block rounded-md px-3.5 py-1.5 text-[10px] font-black uppercase tracking-[0.25em] text-[#0A0A0D]"
-                style={{
-                  background: "linear-gradient(180deg, #FFFFFF 0%, #D4D8E0 45%, #A2A8B5 100%)",
-                  border: "1px solid rgba(255,255,255,0.9)",
-                  boxShadow: "0 2px 8px rgba(0,0,0,0.5), inset 0 1px 0 #FFFFFF"
-                }}
-              >
-                Nacional · Estándar EC0076
-              </div>
-              <h4 className="mt-4 text-xl font-bold tracking-tight text-white">
-                Validez Oficial SEP · CONOCER (México)
-              </h4>
-              <p className="mt-3 text-sm leading-relaxed text-[#C7CCD6]/80">
-                Acreditación bajo el Estándar de Competencia EC0076 con respaldo de CELAM. Registro oficial en el Sistema Nacional de Competencias.
-              </p>
+              Internacional · Florida, USA
             </div>
-
-            <div 
-              className="relative overflow-hidden rounded-2xl p-8 transition-all duration-300 hover:border-purple-400/50"
-              style={{
-                background: "linear-gradient(180deg, rgba(32, 26, 44, 0.8) 0%, rgba(12, 13, 17, 0.98) 100%)",
-                border: "1px solid rgba(168, 85, 247, 0.35)",
-                boxShadow: "inset 0 1px 0 rgba(216, 180, 254, 0.2), 0 10px 30px rgba(109, 40, 217, 0.18)"
-              }}
-            >
-              <div 
-                className="inline-block rounded-md px-3.5 py-1.5 text-[10px] font-black uppercase tracking-[0.25em] text-[#0A0A0D]"
-                style={{
-                  background: "linear-gradient(180deg, #FFFFFF 0%, #E3DDF4 45%, #B6A7D9 100%)",
-                  border: "1px solid rgba(255,255,255,0.9)",
-                  boxShadow: "0 2px 10px rgba(168,85,247,0.3), inset 0 1px 0 #FFFFFF"
-                }}
-              >
-                Internacional · Florida, USA
-              </div>
-              <h4 className="mt-4 text-xl font-bold tracking-tight text-white">
-                Acreditación Internacional FGU (Estados Unidos)
-              </h4>
-              <p className="mt-3 text-sm leading-relaxed text-[#C7CCD6]/80">
-                Certificación emitida por Florida Global University (USA). Aval académico internacional para posicionarte en corporativos globales.
-              </p>
-            </div>
+            <h4 className="mt-4 text-xl font-bold tracking-tight text-white">
+              Certificación Oficial FGU
+            </h4>
+            <p className="mt-3 text-sm leading-relaxed text-[#C7CCD6]/80">
+              Institución registrada legalmente en el Estado de Florida, EE. UU. (Licencia #3180 de la CIE del Departamento de Educación de Florida). Validez internacional para tu historial profesional y LinkedIn.
+            </p>
           </div>
 
-          <div className="relative mt-10 flex flex-wrap items-center justify-center gap-3 border-t border-white/10 pt-8">
+          <div className="relative mt-8 flex flex-wrap items-center justify-center gap-3 border-t border-white/10 pt-8">
             {SELLOS.map((s) => (
               <span
                 key={s}
@@ -894,23 +818,30 @@ function RutaTemporadas() {
                 {s}
               </span>
             ))}
-            
           </div>
 
           <p className="relative mt-6 text-center text-xs italic leading-relaxed text-[#C7CCD6]/60">
-   *Evaluación y emisión de título oficial gestionada al culminar la ruta formativa integral (trámite institucional). Nota importante: Las certificaciones ante CONOCER (México) y Florida Global University (USA) están sujetas a la conclusión exitosa de todo el programa de formación, la aprobación de las evaluaciones correspondientes y el pago de los derechos de trámite y emisión establecidos directamente por cada institución externa, los cuales no están incluidos en el costo del entrenamiento.
+            *Nota importante: El certificado oficial de Florida Global University (USA) está sujeto a la conclusión exitosa de las 5 temporadas del programa, la aprobación de las evaluaciones y el pago de los derechos de trámite correspondientes establecidos directamente por la universidad, los cuales no están incluidos en el costo del entrenamiento.
           </p>
         </div>
+
+        {/* 3. ABAJO: EL RESTO DE LAS TEMPORADAS INDIVIDUALES (T2 a T5) */}
+        <div className="mt-20">
+          <div className="text-center mb-10">
+            <h3 className="text-xl font-semibold text-white">¿Prefieres avanzar paso a paso? Explora el resto de las temporadas individuales:</h3>
+          </div>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {TEMPORADAS.filter(t => t.id !== "t1").map((t) => (
+              <TemporadaCard key={t.id} t={t} />
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );
 }
-{/* Disclaimer de Certificaciones */}
-<div className="mt-8 max-w-3xl mx-auto px-4 text-center">
-  <p className="text-xs text-gray-400 leading-relaxed">
-    *Nota importante: Las certificaciones ante CONOCER (México) y Florida Global University (USA) están sujetas a la conclusión exitosa de todo el programa de formación, la aprobación de las evaluaciones correspondientes y el pago de los derechos de trámite y emisión establecidos directamente por cada institución externa, los cuales no están incluidos en el costo del entrenamiento.
-  </p>
-</div>
+
 /* ---------- G) GARANTÍA + CTA FINAL ---------- */
 
 function GarantiaCTA() {
