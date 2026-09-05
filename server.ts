@@ -1,6 +1,6 @@
-import "./src/lib/error-capture";
-import { consumeLastCapturedError } from "./src/lib/error-capture";
-import { renderErrorPage } from "./src/lib/error-page";
+import "./error-capture";
+import { consumeLastCapturedError } from "./error-capture";
+import { renderErrorPage } from "./error-page";
 
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
 };
