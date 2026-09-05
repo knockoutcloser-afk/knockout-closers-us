@@ -748,7 +748,7 @@ function RutaTemporadas() {
 
       <div className="mx-auto max-w-6xl">
         
-        {/* BLOQUE 1: TEMPORADA 1 (CON TÍTULO CON AURA MORADA Y LATIDO + SUBTÍTULO VISCERAL DE COMPETENCIA) */}
+        {/* BLOQUE 1: TEMPORADA 1 (SIN GUION, CON TÍTULO Y SUBTÍTULO ANIMADOS) */}
         <div className="mx-auto max-w-3xl text-center mb-12">
           <div 
             className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-black uppercase tracking-[0.28em] text-[#0A0A0D] shadow-lg mb-4"
@@ -761,7 +761,8 @@ function RutaTemporadas() {
             Temporada 1 · Empieza tu cambio
           </div>
           <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-5xl pulsing-purple-aura mb-4">
-            Rompe el Techo de Cristal — Entra a la Temporada 1
+            Rompe el Techo de Cristal <br className="hidden md:block" />
+            Entra a la Temporada 1
           </h2>
           <p className="text-balance text-lg md:text-xl font-medium text-purple-300 pulsing-purple-aura inline-block">
             El sistema exacto para que tu perfil técnico hable el idioma del dinero y dejes de perder cuentas frente a competidores nativos
@@ -774,7 +775,7 @@ function RutaTemporadas() {
           ))}
         </div>
 
-        {/* BLOQUE 2: COMBO ALL-ACCESS (CON TÍTULO Y SUBTÍTULO DE INGRESOS B2B, AMBOS CON AURA MORADA Y LATIDO) */}
+        {/* BLOQUE 2: COMBO ALL-ACCESS */}
         <div className="mx-auto max-w-3xl text-center mb-12">
           <div 
             className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-black uppercase tracking-[0.28em] text-[#0A0A0D] shadow-lg mb-4"
