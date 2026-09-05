@@ -46,17 +46,17 @@ const CTA_LABEL = "Asegurar mi lugar en Temporada 1";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Knockout Closers™ — Temporada 1 | Cierra con confianza" },
+      { title: "Knockout Closers™ US — Domina la Venta Consultiva B2B" },
       {
         name: "description",
         content:
-          "Temporada 1 de Knockout Closers™: el sistema que convierte a especialistas técnicos en Closers consultivos. Entra hoy y comienza tu Round 1.",
+          "Rompe el techo de cristal en Estados Unidos. El sistema en español para ingenieros y profesionales técnicos que quieren cerrar contratos de seis cifras.",
       },
-      { property: "og:title", content: "Knockout Closers™ — Temporada 1" },
+      { property: "og:title", content: "Knockout Closers™ US — Venta Consultiva B2B" },
       {
         property: "og:description",
         content:
-          "El sistema que convierte a especialistas técnicos en Closers consultivos. Temporada 1 disponible.",
+          "Domina la venta consultiva B2B y rompe el techo de cristal en Estados Unidos con respaldo de FGU.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -138,7 +138,7 @@ function Header() {
   );
 }
 
-/* ---------- A) HERO ---------- */
+/* ---------- A) HERO (CON HEADLINE OPTIMIZADO PARA EE. UU.) ---------- */
 
 function Hero() {
   return (
@@ -167,16 +167,13 @@ function Hero() {
               boxShadow: "0 0 25px rgba(255,255,255,0.2), inset 0 1px 0 #FFFFFF, 0 4px 15px rgba(0,0,0,0.6)"
             }}
           >
-            Temporada 1 · Round 1
+            Mercado Estados Unidos · Edición en Español
           </div>
-          <h1 className="mx-auto max-w-[24ch] text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-white md:text-6xl lg:mx-0">
-            El mercado ya no recompensa únicamente a quienes más saben.
-            Recompensa a quienes saben convertir conocimiento técnico en{" "}
-            <span className="gradient-text">cierres de alto valor</span>.
+          <h1 className="mx-auto max-w-[24ch] text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-white md:text-5xl lg:mx-0">
+            Domina la Venta Consultiva B2B y <span className="gradient-text">Rompe el Techo de Cristal</span> en Estados Unidos
           </h1>
           <p className="mx-auto mt-7 max-w-[46ch] text-balance text-lg font-medium leading-relaxed text-zinc-200 md:text-xl lg:mx-0">
-            Domina la mentalidad, el contragolpe comercial y la psicología del
-            cierre consultivo B2B en 5 Rounds estratégicos.
+            La única mentoría en español diseñada para ingenieros, preventas y profesionales técnicos que quieren dejar de escribir código detrás de bambalinas y empezar a cerrar contratos de seis cifras.
           </p>
           <div className="mt-10 flex flex-col items-center gap-3 lg:items-start">
             <CTAButton href={HOTMART_URL}>{CTA_LABEL}</CTAButton>
@@ -712,24 +709,48 @@ function RutaTemporadas() {
   return (
     <section className="relative border-b border-white/5 px-6 py-24 md:py-32">
       <div className="mx-auto max-w-6xl">
-        <div className="mx-auto max-w-2xl text-center mb-16">
-          <div className="text-[11px] uppercase tracking-[0.32em] text-white/40">
-            Elige tu camino en el ring
+        
+        {/* BLOQUE 1: TEMPORADA 1 (CON BOTÓN PLATEADO DE AUTORIDAD ARRIBA) */}
+        <div className="mx-auto max-w-2xl text-center mb-12">
+          <div 
+            className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-black uppercase tracking-[0.28em] text-[#0A0A0D] shadow-lg mb-4"
+            style={{
+              background: "linear-gradient(180deg, #FFFFFF 0%, #D8DCE3 35%, #9EA5B4 70%, #E2E6EC 100%)",
+              border: "1px solid #FFFFFF",
+              boxShadow: "0 0 25px rgba(255,255,255,0.2), inset 0 1px 0 #FFFFFF, 0 4px 15px rgba(0,0,0,0.6)"
+            }}
+          >
+            Temporada 1 · Empieza tu camino
           </div>
-          <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight text-white md:text-5xl">
-            Comienza con la Temporada 1 o accede al <span className="gradient-text">Combo All-Access</span>.
+          <h2 className="text-balance text-3xl font-semibold leading-tight text-white md:text-5xl">
+            Comienza con la Temporada 1
           </h2>
         </div>
 
-        {/* 1. ARRIBA: TEMPORADA 1 CENTRADA Y EN TAMAÑO ESTÉTICO */}
-        <div className="max-w-md mx-auto mb-16">
+        <div className="max-w-md mx-auto mb-24">
           {TEMPORADAS.filter(t => t.id === "t1").map((t) => (
             <TemporadaCard key={t.id} t={t} />
           ))}
         </div>
 
-        {/* 2. ABAJO DE LA T1: EL COMBO COMPLETO A TODO EL ANCHO (IGUAL QUE MÉXICO) */}
-        <div className="mb-20">
+        {/* BLOQUE 2: COMBO ALL-ACCESS (CON BOTÓN PLATEADO DE AUTORIDAD ARRIBA Y ANCHO COMPLETO) */}
+        <div className="mx-auto max-w-2xl text-center mb-12">
+          <div 
+            className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-black uppercase tracking-[0.28em] text-[#0A0A0D] shadow-lg mb-4"
+            style={{
+              background: "linear-gradient(180deg, #FFFFFF 0%, #D8DCE3 35%, #9EA5B4 70%, #E2E6EC 100%)",
+              border: "1px solid #FFFFFF",
+              boxShadow: "0 0 25px rgba(255,255,255,0.2), inset 0 1px 0 #FFFFFF, 0 4px 15px rgba(0,0,0,0.6)"
+            }}
+          >
+            Combo All-Access · Acceso Total
+          </div>
+          <h2 className="text-balance text-3xl font-semibold leading-tight text-white md:text-5xl">
+            O accede al ecosistema completo
+          </h2>
+        </div>
+
+        <div className="mb-24">
           <BundleBanner />
         </div>
 
