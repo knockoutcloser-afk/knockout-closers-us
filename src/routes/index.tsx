@@ -670,7 +670,6 @@ function BundleBanner() {
           className="h-full w-full object-cover"
         />
         <div className="p-8 md:p-10">
-          {/* Botón plateado con aura para el Pase de Fundador */}
           <div 
             className="inline-flex items-center gap-2 rounded-full px-5 py-1.5 text-[11px] font-black uppercase tracking-[0.25em] text-[#0A0A0D] shadow-lg mb-4"
             style={{
@@ -749,7 +748,7 @@ function RutaTemporadas() {
 
       <div className="mx-auto max-w-6xl">
         
-        {/* BLOQUE 1: TEMPORADA 1 (CON BOTÓN PLATEADO Y TÍTULO CON AURA PULSATIVA MORADA, SIN GUION) */}
+        {/* BLOQUE 1: TEMPORADA 1 (CON BOTÓN PLATEADO Y TÍTULO CON AURA MORADA Y LATIDO) */}
         <div className="mx-auto max-w-3xl text-center mb-12">
           <div 
             className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-black uppercase tracking-[0.28em] text-[#0A0A0D] shadow-lg mb-4"
@@ -772,8 +771,8 @@ function RutaTemporadas() {
           ))}
         </div>
 
-        {/* BLOQUE 2: COMBO ALL-ACCESS (CON BOTÓN PLATEADO DE AUTORIDAD Y FRASE DE ESTATUS) */}
-        <div className="mx-auto max-w-2xl text-center mb-12">
+        {/* BLOQUE 2: COMBO ALL-ACCESS (CON TÍTULO PRINCIPAL Y SUBTÍTULO AMBOS CON EFECTO PULSATIVO Y AURA MORADA) */}
+        <div className="mx-auto max-w-3xl text-center mb-12">
           <div 
             className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-black uppercase tracking-[0.28em] text-[#0A0A0D] shadow-lg mb-4"
             style={{
@@ -784,9 +783,12 @@ function RutaTemporadas() {
           >
             Combo All-Access · Ecosistema Definitivo
           </div>
-          <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-5xl">
-            O domina el juego completo con el Ecosistema All-Access
+          <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-5xl pulsing-purple-aura mb-4">
+            Domina la metodología de ventas consultivas y disruptivas · Accede al Ecosistema Completo
           </h2>
+          <p className="text-balance text-lg md:text-xl font-medium text-purple-300 pulsing-purple-aura inline-block">
+            Deja de ganar por hora: Cierra contratos B2B de 6 cifras y escala tus ingresos anuales
+          </p>
         </div>
 
         <div className="mb-24">
@@ -889,7 +891,6 @@ function RutaTemporadas() {
         {/* 4. ABAJO: EL RESTO DE LAS TEMPORADAS INDIVIDUALES (T2 a T5) */}
         <div className="mt-20">
           <div className="text-center mb-10">
-            {/* Subtítulo indicador 5 temporadas / 5 rounds */}
             <div 
               className="inline-flex items-center gap-2 rounded-full px-5 py-1.5 text-[11px] font-black uppercase tracking-[0.25em] text-[#0A0A0D] shadow-lg mb-3"
               style={{
