@@ -2,10 +2,9 @@ import "./error-capture";
 import { consumeLastCapturedError } from "./error-capture";
 import { renderErrorPage } from "./error-page";
 
-  fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
-};
-
-let serverEntryPromise: Promise<ServerEntry> | undefined;
+export default {
+  fetch(request: Request, env: unknown, ctx: unknown): Promise<Response> | Response {
+    let serverEntryPromise: Promise<ServerEntry> | undefined;
 
 async function getServerEntry(): Promise<ServerEntry> {
   if (!serverEntryPromise) {
