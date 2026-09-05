@@ -650,48 +650,48 @@ const BUNDLE_INCLUYE = [
 
 function BundleBanner() {
   return (
-    <div className="glass-card shadow-card-premium relative overflow-hidden rounded-3xl h-full flex flex-col justify-between">
-      <div className="grid h-full grid-cols-1 md:grid-cols-[minmax(0,280px)_1fr]">
+    <div className="glass-card shadow-card-premium relative overflow-hidden rounded-3xl">
+      <div className="grid gap-0 md:grid-cols-[minmax(0,320px)_1fr]">
         <img
           src={portadaCombo}
           alt="Pase All-Access — Universo Knockout Closers"
           loading="lazy"
           className="h-full w-full object-cover"
         />
-        <div className="p-6 md:p-8 flex flex-col justify-between">
-          <div>
-            <div className="inline-flex items-center rounded-full border border-green-500/40 bg-green-500/10 px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-green-400 font-bold">
-              Más Popular & Ahorro
-            </div>
-            <h3 className="mt-4 text-balance text-xl font-semibold leading-tight text-white md:text-2xl">
-              Combo 5 Temporadas <span className="text-green-400">All-Access</span>
-            </h3>
-            <p className="mt-3 text-[14px] leading-[1.6] text-white/70">
-              Acceso inmediato a todo el contenido sin esperas. Elegible para tramitar el certificado oficial internacional de Florida Global University con nuestro acompañamiento guiado.
-            </p>
-            <ul className="mt-4 space-y-2">
-              {BUNDLE_INCLUYE.map((b) => (
-                <li
-                  key={b}
-                  className="flex items-start gap-2 text-[13px] leading-[1.5] text-white/75"
-                >
-                  <Check
-                    size={15}
-                    strokeWidth={2.5}
-                    className="mt-0.5 shrink-0 text-green-400"
-                  />
-                  <span>{b}</span>
-                </li>
-              ))}
-            </ul>
+        <div className="p-8 md:p-10">
+          <div className="inline-flex items-center rounded-full border border-[#C7CCD6]/30 bg-white/[0.04] px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-[#C7CCD6]">
+            Mejor valor · Pase de fundador
           </div>
-          <div className="mt-6 pt-4 border-t border-white/10">
-            <p className="text-[14px] text-white/50 mb-3">
-              Valor: <span className="line-through">$1,335 USD</span> →{" "}
-              <span className="font-extrabold text-green-400 text-lg">
-                $597 USD (Ahorras $738)
-              </span>
-            </p>
+          <h3 className="mt-5 text-balance text-2xl font-semibold leading-tight text-white md:text-3xl">
+            ¿Quieres el ecosistema completo con más del{" "}
+            <span className="gradient-text">65% de descuento</span>?
+          </h3>
+          <p className="mt-4 text-[15px] leading-[1.7] text-white/70">
+            Obtén acceso total a las 5 Temporadas + Mentorías 1-1 + Opción a Certificación Oficial con Florida Global University (FGU) y nuestro acompañamiento guiado.
+          </p>
+          <ul className="mt-6 space-y-2.5">
+            {BUNDLE_INCLUYE.map((b) => (
+              <li
+                key={b}
+                className="flex items-start gap-2.5 text-[14px] leading-[1.6] text-white/70"
+              >
+                <Check
+                  size={16}
+                  strokeWidth={2}
+                  className="mt-0.5 shrink-0"
+                  style={{ color: "#C7CCD6" }}
+                />
+                <span>{b}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-5 text-[15px] text-white/50">
+            Valor individual: <span className="line-through">$1,335 USD</span> →{" "}
+            <span className="font-semibold text-[#E8EAED]">
+              Precio All-Access: $597 USD
+            </span>
+          </p>
+          <div className="mt-7">
             <CTAButton href={BUNDLE_URL}>
               Obtener el Combo All-Access Completo ($597 USD)
             </CTAButton>
@@ -721,19 +721,19 @@ function RutaTemporadas() {
           </h2>
         </div>
 
-        {/* 1. ARRIBA: TEMPORADA 1 Y EL COMBO COMPLETO JUNTOS */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch mb-20">
-          <div className="flex flex-col justify-between">
-            {TEMPORADAS.filter(t => t.id === "t1").map((t) => (
-              <TemporadaCard key={t.id} t={t} />
-            ))}
-          </div>
-          <div className="flex flex-col justify-center">
-            <BundleBanner />
-          </div>
+        {/* 1. ARRIBA: TEMPORADA 1 CENTRADA Y EN TAMAÑO ESTÉTICO */}
+        <div className="max-w-md mx-auto mb-16">
+          {TEMPORADAS.filter(t => t.id === "t1").map((t) => (
+            <TemporadaCard key={t.id} t={t} />
+          ))}
         </div>
 
-        {/* 2. RESBALDO ACADÉMICO EXCLUSIVO FGU (SIN CONOCER) */}
+        {/* 2. ABAJO DE LA T1: EL COMBO COMPLETO A TODO EL ANCHO (IGUAL QUE MÉXICO) */}
+        <div className="mb-20">
+          <BundleBanner />
+        </div>
+
+        {/* 3. RESBALDO ACADÉMICO EXCLUSIVO FGU (SIN CONOCER) */}
         <div 
           className="relative mt-14 overflow-hidden rounded-3xl p-8 md:p-12 shadow-[0_25px_60px_rgba(0,0,0,0.95)]"
           style={{
@@ -825,7 +825,7 @@ function RutaTemporadas() {
           </p>
         </div>
 
-        {/* 3. ABAJO: EL RESTO DE LAS TEMPORADAS INDIVIDUALES (T2 a T5) */}
+        {/* 4. ABAJO: EL RESTO DE LAS TEMPORADAS INDIVIDUALES (T2 a T5) */}
         <div className="mt-20">
           <div className="text-center mb-10">
             <h3 className="text-xl font-semibold text-white">¿Prefieres avanzar paso a paso? Explora el resto de las temporadas individuales:</h3>
