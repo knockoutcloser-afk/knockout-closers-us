@@ -138,7 +138,7 @@ function Header() {
   );
 }
 
-/* ---------- A) HERO (CON HEADLINE OPTIMIZADO PARA EE. UU.) ---------- */
+/* ---------- A) HERO ---------- */
 
 function Hero() {
   return (
@@ -202,10 +202,18 @@ function Testimonios() {
     >
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="text-[11px] uppercase tracking-[0.32em] text-white/40">
-            Historias documentadas
+          {/* Botón estético plata con aura */}
+          <div 
+            className="inline-flex items-center gap-2 rounded-full px-6 py-2 text-xs font-black uppercase tracking-[0.3em] text-[#0A0A0D] shadow-lg mb-4"
+            style={{
+              background: "linear-gradient(180deg, #FFFFFF 0%, #D8DCE3 35%, #9EA5B4 70%, #E2E6EC 100%)",
+              border: "1px solid #FFFFFF",
+              boxShadow: "0 0 25px rgba(255,255,255,0.25), inset 0 1px 0 #FFFFFF"
+            }}
+          >
+            Historias Documentadas
           </div>
-          <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight text-white md:text-5xl">
+          <h2 className="mt-2 text-balance text-3xl font-semibold leading-tight text-white md:text-5xl">
             10 profesionales. Evidencia verificada en LinkedIn.
           </h2>
         </div>
@@ -273,10 +281,18 @@ function VideoTestimonial() {
     <section className="relative border-b border-white/5 px-6 py-24 md:py-32">
       <div className="mx-auto max-w-4xl">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="text-[11px] uppercase tracking-[0.32em] text-white/40">
-            Video documental
+          {/* Botón estético plata con aura */}
+          <div 
+            className="inline-flex items-center gap-2 rounded-full px-6 py-2 text-xs font-black uppercase tracking-[0.3em] text-[#0A0A0D] shadow-lg mb-4"
+            style={{
+              background: "linear-gradient(180deg, #FFFFFF 0%, #D8DCE3 35%, #9EA5B4 70%, #E2E6EC 100%)",
+              border: "1px solid #FFFFFF",
+              boxShadow: "0 0 25px rgba(255,255,255,0.25), inset 0 1px 0 #FFFFFF"
+            }}
+          >
+            Video Documental
           </div>
-          <h2 className="mt-4 text-balance text-2xl font-semibold leading-tight text-white md:text-4xl">
+          <h2 className="mt-2 text-balance text-2xl font-semibold leading-tight text-white md:text-4xl">
             Escúchalo directamente de quienes ya lo vivieron.
           </h2>
         </div>
@@ -656,10 +672,18 @@ function BundleBanner() {
           className="h-full w-full object-cover"
         />
         <div className="p-8 md:p-10">
-          <div className="inline-flex items-center rounded-full border border-[#C7CCD6]/30 bg-white/[0.04] px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-[#C7CCD6]">
-            Mejor valor · Pase de fundador
+          {/* Botón plateado con aura para el Pase de Fundador */}
+          <div 
+            className="inline-flex items-center gap-2 rounded-full px-5 py-1.5 text-[11px] font-black uppercase tracking-[0.25em] text-[#0A0A0D] shadow-lg mb-4"
+            style={{
+              background: "linear-gradient(180deg, #FFFFFF 0%, #D8DCE3 35%, #9EA5B4 70%, #E2E6EC 100%)",
+              border: "1px solid #FFFFFF",
+              boxShadow: "0 0 25px rgba(255,255,255,0.25), inset 0 1px 0 #FFFFFF"
+            }}
+          >
+            Tu Mejor Inversión · Pase de Fundador
           </div>
-          <h3 className="mt-5 text-balance text-2xl font-semibold leading-tight text-white md:text-3xl">
+          <h3 className="mt-2 text-balance text-2xl font-semibold leading-tight text-white md:text-3xl">
             ¿Quieres el ecosistema completo con más del{" "}
             <span className="gradient-text">65% de descuento</span>?
           </h3>
@@ -710,20 +734,20 @@ function RutaTemporadas() {
     <section className="relative border-b border-white/5 px-6 py-24 md:py-32">
       <div className="mx-auto max-w-6xl">
         
-        {/* BLOQUE 1: TEMPORADA 1 (CON BOTÓN PLATEADO DE AUTORIDAD ARRIBA) */}
+        {/* BLOQUE 1: TEMPORADA 1 (CON FRASE DISRUPTIVA Y BOTÓN PLATEADO) */}
         <div className="mx-auto max-w-2xl text-center mb-12">
           <div 
             className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-black uppercase tracking-[0.28em] text-[#0A0A0D] shadow-lg mb-4"
             style={{
               background: "linear-gradient(180deg, #FFFFFF 0%, #D8DCE3 35%, #9EA5B4 70%, #E2E6EC 100%)",
               border: "1px solid #FFFFFF",
-              boxShadow: "0 0 25px rgba(255,255,255,0.2), inset 0 1px 0 #FFFFFF, 0 4px 15px rgba(0,0,0,0.6)"
+              boxShadow: "0 0 25px rgba(255,255,255,0.3), inset 0 1px 0 #FFFFFF"
             }}
           >
-            Temporada 1 · Empieza tu camino
+            Temporada 1 · Empieza tu cambio
           </div>
-          <h2 className="text-balance text-3xl font-semibold leading-tight text-white md:text-5xl">
-            Comienza con la Temporada 1
+          <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-5xl">
+            Rompe el Techo de Cristal — Entra a la Temporada 1
           </h2>
         </div>
 
@@ -733,20 +757,20 @@ function RutaTemporadas() {
           ))}
         </div>
 
-        {/* BLOQUE 2: COMBO ALL-ACCESS (CON BOTÓN PLATEADO DE AUTORIDAD ARRIBA Y ANCHO COMPLETO) */}
+        {/* BLOQUE 2: COMBO ALL-ACCESS (CON FRASE DE ESTATUS Y BOTÓN PLATEADO) */}
         <div className="mx-auto max-w-2xl text-center mb-12">
           <div 
             className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-black uppercase tracking-[0.28em] text-[#0A0A0D] shadow-lg mb-4"
             style={{
               background: "linear-gradient(180deg, #FFFFFF 0%, #D8DCE3 35%, #9EA5B4 70%, #E2E6EC 100%)",
               border: "1px solid #FFFFFF",
-              boxShadow: "0 0 25px rgba(255,255,255,0.2), inset 0 1px 0 #FFFFFF, 0 4px 15px rgba(0,0,0,0.6)"
+              boxShadow: "0 0 25px rgba(255,255,255,0.3), inset 0 1px 0 #FFFFFF"
             }}
           >
-            Combo All-Access · Acceso Total
+            Combo All-Access · Ecosistema Definitivo
           </div>
-          <h2 className="text-balance text-3xl font-semibold leading-tight text-white md:text-5xl">
-            O accede al ecosistema completo
+          <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-5xl">
+            O domina el juego completo con el Ecosistema All-Access
           </h2>
         </div>
 
@@ -754,7 +778,7 @@ function RutaTemporadas() {
           <BundleBanner />
         </div>
 
-        {/* 3. RESBALDO ACADÉMICO EXCLUSIVO FGU (SIN CONOCER) */}
+        {/* 3. RESPALDO ACADÉMICO EXCLUSIVO FGU (CON BOTONES NEGRO METAL CON AURA MORADA) */}
         <div 
           className="relative mt-14 overflow-hidden rounded-3xl p-8 md:p-12 shadow-[0_25px_60px_rgba(0,0,0,0.95)]"
           style={{
@@ -771,12 +795,13 @@ function RutaTemporadas() {
           />
 
           <div className="relative text-center">
+            {/* Botón estético plata con aura */}
             <div 
               className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-extrabold uppercase tracking-[0.28em] text-[#0A0A0D] shadow-lg"
               style={{
                 background: "linear-gradient(180deg, #FFFFFF 0%, #D8DCE3 35%, #9EA5B4 70%, #E2E6EC 100%)",
                 border: "1px solid #FFFFFF",
-                boxShadow: "0 0 25px rgba(255,255,255,0.2), inset 0 1px 0 #FFFFFF, 0 4px 15px rgba(0,0,0,0.6)"
+                boxShadow: "0 0 25px rgba(255,255,255,0.25), inset 0 1px 0 #FFFFFF"
               }}
             >
               Respaldo Curricular de Élite
@@ -824,16 +849,17 @@ function RutaTemporadas() {
             </p>
           </div>
 
+          {/* Botones inferiores: Negro metal con aura morada (UV Light) */}
           <div className="relative mt-8 flex flex-wrap items-center justify-center gap-3 border-t border-white/10 pt-8">
             {SELLOS.map((s) => (
               <span
                 key={s}
                 className="rounded-xl px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.24em] transition-all"
                 style={{
-                  background: "linear-gradient(180deg, rgba(235, 238, 245, 0.12) 0%, rgba(160, 165, 175, 0.04) 100%)",
-                  border: "1px solid rgba(220, 225, 235, 0.25)",
+                  background: "linear-gradient(180deg, rgba(20, 18, 30, 0.95) 0%, rgba(10, 8, 15, 0.98) 100%)",
+                  border: "1px solid rgba(168, 85, 247, 0.4)",
                   color: "#FFFFFF",
-                  boxShadow: "inset 0 1px 0 rgba(255,255,255,0.15), 0 4px 12px rgba(0,0,0,0.5)"
+                  boxShadow: "0 0 20px rgba(168, 85, 247, 0.25), inset 0 1px 0 rgba(216, 180, 254, 0.15)"
                 }}
               >
                 {s}
@@ -849,6 +875,17 @@ function RutaTemporadas() {
         {/* 4. ABAJO: EL RESTO DE LAS TEMPORADAS INDIVIDUALES (T2 a T5) */}
         <div className="mt-20">
           <div className="text-center mb-10">
+            {/* Subtítulo indicador 5 temporadas / 5 rounds */}
+            <div 
+              className="inline-flex items-center gap-2 rounded-full px-5 py-1.5 text-[11px] font-black uppercase tracking-[0.25em] text-[#0A0A0D] shadow-lg mb-3"
+              style={{
+                background: "linear-gradient(180deg, #FFFFFF 0%, #D8DCE3 35%, #9EA5B4 70%, #E2E6EC 100%)",
+                border: "1px solid #FFFFFF",
+                boxShadow: "0 0 20px rgba(255,255,255,0.25), inset 0 1px 0 #FFFFFF"
+              }}
+            >
+              5 Temporadas · 5 Rounds
+            </div>
             <h3 className="text-xl font-semibold text-white">¿Prefieres avanzar paso a paso? Explora el resto de las temporadas individuales:</h3>
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
