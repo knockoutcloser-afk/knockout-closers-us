@@ -1,0 +1,5 @@
+import { createStartHandler, defaultLoadServerRoute } from "@tanstack/react-start/server";
+
+export default createStartHandler({
+  loadServerRoute: defaultLoadServerRoute,
+});
